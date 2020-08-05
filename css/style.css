@@ -1,1 +1,390 @@
+/************
+COLORS USED:
+#000;
+#222;
+#444;
+#666;
+#999;
+#CCC; 
+#DDD;
+#EEE;
+#393c40;
+#4287f5;
+darkblue
+royalblue
+********/
 
+/********** import font pair for body and heading  *************************************************/
+
+@import url('https://fonts.googleapis.com/css?family=Gentium+Book+Basic:wght@700|Open+Sans');
+
+/***************************************************************************************************/
+
+.clearfix::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+/************
+DEFAULT STYLE
+*************/
+
+* {
+    box-sizing: border-box;     
+}
+
+
+body {
+    font-family: 'Open Sans', sans-serif;    
+    font-size: 1rem;
+    line-height: 1.5;
+    margin: 0;        
+}
+
+h1{
+    line-height: 1.5;
+    font-family: 'Gentium Book Basic', serif;/*
+    letter-spacing: 3px;
+    transform: translateY(0.5rem);
+*/
+	font-size:2rem;
+}
+
+h4{
+    font-family: 'Gentium Book Basic', serif;
+    font-size:1.5rem;    
+}
+
+/*box class used in all the divs*/
+
+.bg-header .box,
+.bg-footer .box {
+    padding: 2rem 2rem;
+}
+
+.bg-main-content .box {
+    padding: 0.5rem;
+    color: #666;
+}
+
+/* style for the header of the html page*/
+header {
+    font-size: 1rem;   
+}
+
+
+.bg-header {
+    background-image: url(../img/header-image.jpg);
+    background-repeat: no-repeat;
+    -webkit-background-size: cover;
+    background-size: cover;
+	
+	object-position: top;
+/*    background-color: darkblue;*/
+    background-blend-mode: multiply;
+}
+
+
+#tag-line {
+    -webkit-mask-image: url(https://dl.dropbox.com/s/u92nd5fpuatesd0/mask.png?dl=0);
+    -o-mask-image: url(https://dl.dropbox.com/s/u92nd5fpuatesd0/mask.png?dl=0);
+    -moz-mask-image: url(https://dl.dropbox.com/s/u92nd5fpuatesd0/mask.png?dl=0);
+    mask-image: url(https://dl.dropbox.com/s/u92nd5fpuatesd0/mask.png?dl=0);
+    color:#000000;
+    text-align: center;
+	padding-bottom:5px;
+	text-shadow: 1px 1px #ffffff;	
+}
+
+
+
+.logo img{	
+		text-align: center;	
+		max-width:100%;
+		width:60px;
+		height:80px;
+		object-fit: cover;
+		object-position: bottom;				
+}
+
+/* style for nav bar */
+.bg-nav ul{    
+    list-style: none;
+    padding:0.5% 2%;
+}
+
+.bg-nav ul li:nth-child(1){    
+    text-align: center;
+}
+
+
+
+/* style of main content */
+
+#active{
+    
+    background-color: #393c40;
+    color:white;
+    
+}
+
+hr{
+	
+	height:2px;
+	width:80%;
+	color: #ccc;
+}
+
+.controls{    
+    padding:0 2rem;
+
+}
+
+.btn{
+    background-color: #4287f5; /* Blue */
+    border: none;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    margin:2% 0;
+    width:100%;
+    height:50px;
+}
+
+
+.nav-flex{
+	
+	display: flex;
+	flex-direction: column;
+	flex-grow: 1;
+	
+}
+
+
+
+.bg-main-content{
+	display: flex;
+    flex-direction: column;	
+    padding:0 0; 
+	
+}
+
+.new-content{	
+    display: flex;
+    flex-direction: column;
+	float:left;
+    padding:2rem 2rem;    
+}
+
+.new-content.article-content{	
+	display: flex;
+    flex-direction: row;	
+}
+
+.article-content figure{	
+	float:left;	
+}
+
+.article-content figcaption{
+	text-align:center;
+}
+
+
+
+
+.article-content img{
+		text-align: center;
+	/*	width:100%;*/
+		max-width:100%;
+		width:380px;
+		height:300px;
+		object-fit: cover;	
+}
+
+
+.new-content h2{	
+	text-align: center;
+}
+
+
+
+
+/****** settings for service section ***/
+
+
+.service-section{
+		text-align: center;
+		display: grid;	
+		margin-top:1rem;	
+}
+
+
+.service-box{
+		width:100%;
+		border-radius: 3%;
+}
+
+
+.service-box img{		
+		max-width:100%;
+		width:380px;
+		height:300px;
+		object-fit: cover;		
+}
+
+
+
+.row-two{
+		display:grid;
+}
+
+
+.portfolio-style{	
+		margin-bottom: 5%;
+}
+
+
+
+
+
+/* style for the footer of the html page */
+.bg-footer{    
+		display: grid;
+		grid-template-rows: auto auto;
+		overflow: hidden;
+		background-color: grey;
+		text-align: center;   
+		padding:1.5rem 1rem;
+    
+}
+
+.bg-footer ul{    
+    	list-style: none;    
+}
+
+.bg-footer ul li{    
+		display: inline;
+		padding:0 10px;    
+}
+
+
+/* media query */
+
+
+@media screen and (min-width: 50rem) {
+    
+    
+    #tag-line {        
+        font-size: 4rem;
+    }
+
+    body {        
+        font-size: 1rem;
+        max-width:1600px;
+    }
+    
+    .bg-nav ul{        
+
+/*        padding:0.5% 15%;*/
+    }
+        
+    .bg-nav ul li{    
+        display: inline;
+        padding:0 10px;    
+    }  
+    
+    .rule{    
+        margin: 1% 16%;
+    }
+    
+    .controls{    
+        padding:0 2rem;
+    } 
+    
+    .new-content{    
+        display: flex;
+        flex-direction: column;
+        padding:1% 15%;    
+    }
+	
+	.bg-main-content{
+		display: flex;
+    	flex-direction: column;	
+    	padding:0 1.2rem; 
+		margin-bottom: 10%;
+	}
+    
+    
+	
+   .row-two{
+		grid-template-columns: repeat(2, 1fr);
+		column-gap: 10px;
+	}
+
+
+	.social-section{
+		grid-template-columns: repeat(2, 1fr);
+		column-gap: 10px;
+		padding:3% 5%;		
+		text-align: center;	
+	}	
+	
+	
+	.portfolio-style{	
+		margin-bottom: 2%;
+	}
+	
+	.btn{    
+		width:35%;
+		height:50px;		
+	}
+    
+}
+
+
+@media screen and (min-width: 80rem) {
+    
+    
+	
+	.row-two{
+		grid-template-columns: repeat(3, 1fr);
+		column-gap: 10px;
+	}
+
+
+	.social-section{
+
+		grid-template-columns: repeat(3, 1fr);
+		column-gap: 10px;
+		padding:3% 5%;		
+		text-align: center;	
+		
+
+	}
+	
+	
+	.bg-main-content{
+		display: flex;
+    	flex-direction: column;	
+    	padding:0 8%; 
+		margin-bottom: 8%;
+	}
+	
+    
+    .btn{    
+		width:30%;
+		height:50px;
+		
+	}
+	
+	.controls{
+		
+		text-align: center;
+/*		padding:0 7rem;*/
+	}
+    
+    
+}
